@@ -14,13 +14,21 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Event',
+            name="Event",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(default='(empty)', max_length=256)),
-                ('starting_at', models.DateTimeField()),
-                ('password', models.CharField(blank=True, max_length=512, null=True)),
-                ('attendants', models.ManyToManyField(to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(default="(empty)", max_length=256)),
+                ("starting_at", models.DateTimeField()),
+                ("password", models.CharField(blank=True, max_length=512, null=True)),
+                ("attendants", models.ManyToManyField(to=settings.AUTH_USER_MODEL)),
             ],
         ),
     ]
